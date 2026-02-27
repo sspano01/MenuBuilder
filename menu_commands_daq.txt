@@ -1,0 +1,11 @@
+# Basic data acquisition system command set
+DaqInit:DAQ INIT [RATE_HZ] {CHANNEL_MASK}:Initialize acquisition rate and optional channel mask
+DaqStart:DAQ START {DURATION_MS}:Start acquisition, optionally for a fixed duration
+DaqStop:DAQ STOP:Stop acquisition
+DaqRead:DAQ READ [CHANNEL]:Read latest sample for a channel
+DaqSetGain:DAQ SET GAIN [CHANNEL] [GAIN_DB]:Set channel gain in dB
+DaqSetTrigger:DAQ SET TRIGGER [SOURCE] {LEVEL}:Set trigger source and optional level
+DaqStatus:DAQ STATUS {DETAIL}:Show DAQ status
+DaqCalibrate:DAQ CALIBRATE [CHANNEL] {REFERENCE_MV}:Calibrate a channel with optional reference value
+DaqSaveConfig:DAQ SAVE CONFIG [NAME]:Save current configuration profile
+DaqLoadConfig:DAQ LOAD CONFIG [NAME]:Load configuration profile
